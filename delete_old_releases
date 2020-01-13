@@ -22,11 +22,11 @@ def print_usage():
     """ Print the usage message for the script. """
     print """Deletes files other than the most recent.
     Usage:
-        delete_files '/path/to/files/pre_*.ext' <num_to_keep default=3>
+        delete_old_releases '/path/to/files/pre_*.ext' <num_to_keep default=3>
 
-        e.g. delete_files '/home/boggins/pictures/*.jpg' 5
+        e.g. delete_old_releases '/home/boggins/pictures/*.jpg' 5
 
-        delete_files -h prints this message.
+        delete_old_releases -h prints this message.
     """
 
 if len(sys.argv) < 2 or sys.argv[1] == '-h':
