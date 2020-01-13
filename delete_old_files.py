@@ -13,8 +13,9 @@ def sort_files_by_last_modified(files):
 def delete_oldest_files(sorted_files, keep = 3):
     delete = len(sorted_files) - keep
     for x in range(0, delete):
-        print "Deleting: " + sorted_files[x][0]
-        os.rmdir(sorted_files[x][0])
+        if(not os.path.isfile(sorted_files[x][0])):
+            print "Deleting: " + sorted_files[x][0]
+            os.rmdir(sorted_files[x][0])
 
 def print_usage():
     """ Print the usage message for the script. """
